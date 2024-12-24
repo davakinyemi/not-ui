@@ -1,0 +1,60 @@
+// Color System
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --text-color: #333333;
+    --background-color: #f8f9fa;
+    --accent-color: #007bff;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+
+    // Light mode variables
+    --light-text-color: #333333;
+    --light-background-color: #f8f9fa;
+
+    // Dark mode variables
+    --dark-text-color: #ffffff;
+    --dark-background-color: #121212;
+}
+
+// Utility classes
+@mixin text-color($color) {
+    color: $color !important;
+}
+
+@mixin bg-color($color) {
+    background-color: $color !important;
+}
+
+// Text color
+.text-primary { @include text-color(var(--primary-color)); }
+.text-secondary { @include text-color(var(--secondary-color)); }
+.text-accent { @include text-color(var(--accent-color)); }
+.text-error { @include text-color(var(--error-color)); }
+.text-success { @include text-color(var(--success-color)); }
+.text-warning { @include text-color(var(--warning-color)); }
+
+// Background color
+.bg-primary { @include bg-color(var(--primary-color)); }
+.bg-secondary { @include bg-color(var(--secondary-color)); }
+.bg-accent { @include bg-color(var(--accent-color)); }
+.bg-error { @include bg-color(var(--error-color)); }
+.bg-success { @include bg-color(var(--success-color)); }
+.bg-warning { @include bg-color(var(--warning-color)); }
+
+// Light/Dark mode switcher
+.light-mode {
+    --text-color: var(--light-text-color);
+    --background-color: var(--light-background-color);
+}
+
+.dark-mode {
+    --text-color: var(--dark-text-color);
+    --background-color: var(--dark-background-color);
+}
+
+// Prevent forced dark mode
+:root {
+    color-scheme: light dark;
+}

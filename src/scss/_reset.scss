@@ -1,0 +1,58 @@
+// CSS Reset
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px; // Base font size
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    overscroll-behavior: none;
+    font-family: 'Inter', sans-serif; // Default font family
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    // Add vendor prefixes for older browsers
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Normalize form elements
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+// Remove default button styles
+button {
+    overflow: visible;
+    text-transform: none;
+}
+
+// Normalize table styles
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
